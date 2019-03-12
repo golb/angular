@@ -1,8 +1,8 @@
 # NOTES:
 
-That app uses webpack proxy server for getting API data, bcs. CORS
+That app uses webpack proxy server for getting API data, because CORS polycy.
 It contains some basic tests: unit, e2e etc.
-And, sure, it possible improve by adding some Interceptors for API key, filters etc. I've not added it for that small app.
+And, sure, it possible improve by adding some Interceptors for API key, filters and grouped files in components folder etc. I've not added it for because that is small app.
 
 # CreativeApp
 
