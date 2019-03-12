@@ -1,3 +1,9 @@
+# NOTES:
+
+That app uses webpack proxy server for getting API data, bcs. CORS
+It contains some basic tests: unit, e2e etc.
+And, sure, it possible improve by adding some Interceptors for API key, filters etc. I've not added it for that small app.
+
 # CreativeApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.4.
