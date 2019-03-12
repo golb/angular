@@ -1,0 +1,92 @@
+@import '_colors';
+
+h1, h2 {
+  color: $gray;
+  font-size: 2.75rem;
+  line-height: 1.4;
+  font-weight: 700;
+  margin-bottom: .5rem;
+  margin-top: .2rem;
+  text-rendering: optimizeLegibility;
+  padding-bottom: 1.875rem;
+  padding-left: .9375rem;
+  padding-right: .9375rem;
+}
+
+h2 {
+  padding-top: 1.875rem;
+}
+
+p {
+  font-family: inherit;
+  font-size: 1.1rem;
+  font-weight: 400;
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+  text-rendering: optimizeLegibility;
+  padding-left: .9375rem;
+  padding-right: .9375rem;
+}
+
+form {
+  padding-bottom: 1.875rem;
+  padding-left: .9375rem;
+  padding-right: .9375rem;
+}
+
+label {
+  display: block;
+
+  input, textarea {
+    display: block;
+    width: 50%;
+    margin-bottom: 20px;
+    padding: .5em;
+    border: 2px solid #909090;
+  }
+
+  .error {
+    margin-top: -20px;
+    background: $red;
+    color: #fff;
+    padding: .5em;
+    display: inline-block;
+    font-size: 1em;
+    margin-bottom: 20px;
+  }
+}
+
+.sendIt {
+  border-radius: 5px;
+  cursor: pointer;
+  color: #909090;
+  border: 2px solid #909090;
+  font-size: .875rem;
+  padding: .5rem .625rem;  
+  transition: 0.5s easy-in-out;
+  
+  &:hover {
+    background: $gray;
+    color: #fff;
+    border-color: $gray;
+  }
+}
+
+.results {
+  background: $gray;
+  color: #fff;
+  border-radius: 5px;
+  width: 50%;
+  padding: .5rem .625rem;
+  margin-bottom: 1.25rem;
+  
+  strong {
+    display: block;
+    font-weight: 700;
+  }
+  
+  span {
+    margin-bottom: 20px;
+    display: block;
+  }
+}

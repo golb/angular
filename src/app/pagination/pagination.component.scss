@@ -1,0 +1,36 @@
+@import '_colors';
+
+.pagination {
+  ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin-bottom: 2.25rem;
+    line-height: 1.6;
+
+    &.justifyContent-right {
+      justify-content: flex-end;
+      padding-right: .9375rem;
+    }
+  }
+}
+
+li {
+  font-size: 1rem;
+
+  a {
+    display: block;
+    padding: .625rem .9375rem .625rem;
+    border: 1px solid #ddd;
+    border-left-width: 0;
+    transition: background-color 300ms ease-out;
+
+    &:hover, &.active {
+      background: lighten($gray, 70%);
+    }
+  }
+
+  &:first-child a {
+    border-left-width: 1px;
+  }
+}

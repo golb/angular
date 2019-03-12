@@ -1,0 +1,11 @@
+{
+  "/api_behance/*": {
+    "target": "https://www.behance.net",
+    "secure": false,
+    "pathRewrite": {
+      "/api_behance/": ""
+    },
+    "logLevel": "silent",
+    "changeOrigin": true
+  }
+}

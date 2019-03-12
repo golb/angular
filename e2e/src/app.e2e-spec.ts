@@ -7,10 +7,16 @@ describe('workspace-project App', () => {
   beforeEach(() => {
     page = new AppPage();
   });
-
-  it('should display welcome message', () => {
+  
+  it('should redirect to projects', async () => {
     page.navigateTo();
-    expect(page.getTitleText()).toEqual('Welcome to creative-app!');
+    const url = await browser.getCurrentUrl();
+    expect(url).toContain('/projects');
+  });
+
+  it('should display Creativus', () => {
+    page.navigateTo();
+    expect(page.getTitleText()).toEqual('Creativus');
   });
 
   afterEach(async () => {

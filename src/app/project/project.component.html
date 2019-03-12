@@ -1,0 +1,74 @@
+<ng-container *ngIf="isProjectLoaded">
+  <div class="burgerBtn cross" (click)="goBack()"><span></span></div>
+  
+  <h1>{{project.project.name}}</h1>
+  
+  <section class="paddedTop">
+    <div class="small-12 item">
+      <figure *ngFor="let creative of project.project.modules">
+        <div class="imgWrapper" *ngIf="creative.type == 'image'">
+          <img [src]="creative.sizes.original">
+        </div>
+      </figure>
+    </div>
+  </section>
+
+  <section>
+    <div class="small-12 medium-4 item">
+      <h2>Description</h2>
+    </div>
+    <div class="content small-12 medium-8 item">
+      <p>{{project.project.description}}</p>
+    </div>
+  </section>
+
+  <section class="paddedTop" *ngIf="project.project.owners.length">
+    <div class="small-12 medium-4 item">
+      <h2>Details</h2>
+    </div>
+    <div class="content small-12 medium-8 item">
+      <ul class="details">
+        <li>
+          <img [src]="project.project.owners[0].images[230]">
+        </li>
+        <li>
+          <strong class="title">Creator</strong>
+          <span>{{project.project.owners[0].display_name}}</span>
+        </li>        
+        <li>
+          <strong class="title">City</strong>
+          <span>{{project.project.owners[0].city}}</span>
+        </li>        
+        <li>
+          <strong class="title">Appreciations</strong>
+          <span>{{project.project.owners[0].stats.appreciations}}</span>
+        </li>
+        <li>
+          <strong class="title">Published on</strong>
+          <span>{{project.project.published_on | date: 'mediumDate'}}</span>
+        </li>
+        <li>
+          <strong class="title">Followers</strong>
+          <span>{{project.project.owners[0].stats.followers}}</span>
+        </li>
+        <li>
+          <strong class="title">Views</strong>
+          <span>{{project.project.owners[0].stats.views}}</span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="paddedBottom paddedTop">
+    <div class="small-12 medium-4 item">
+      <h2>Tags</h2>
+    </div>
+    <div class="content small-12 medium-8 item">
+      <ul>
+        <li *ngFor="let tag of project.project.tags">
+          <div>{{tag}}</div>
+        </li>
+      </ul>
+    </div>
+  </section>
+</ng-container>

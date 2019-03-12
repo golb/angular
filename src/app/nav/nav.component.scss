@@ -1,0 +1,47 @@
+@import '_colors';
+
+.navContainer {
+  width: 100%;
+  background: #fff;
+  padding-left: .9375rem;
+  padding-right: .9375rem;
+}
+
+nav {
+  height: 3.4375rem;
+  line-height: 3.4375rem;
+  margin-bottom: 0;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: baseline;
+}
+
+@media only screen and (min-width: 64.063em) {
+  nav {
+    margin: 0 auto;
+    margin-bottom: 0;
+    max-width: 75rem;
+    overflow: visible;
+  }
+}
+
+.logo {
+  font-size: 22px;
+  margin-right: 25px;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+  
+  li {
+    margin-left: 20px;
+    
+    a.active, a:hover {
+      color: $red;
+    }
+  }
+}
+  

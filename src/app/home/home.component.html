@@ -1,0 +1,20 @@
+<div class="search">  
+  <input type="search" placeholder="Search" #search [value]="searchWord" (keyup.enter)="onEnter(search.value)" autofocus>
+</div>
+
+<ng-container *ngIf="!isProjectsLoaded && !errorCode">
+  <p>Page {{pageId}} of {{searchWord}} Projects loading...</p>
+</ng-container>
+
+<ng-container *ngIf="errorCode">
+  <p>Sorry, {{searchWord}} Projects cannot be loaded. It's about Error with 3-rd party API!</p>
+  <p>Getting {{errorCode}} ({{errorText}})</p>
+</ng-container>
+
+<ng-container *ngIf="isProjectsLoaded && !errorCode">
+  <app-pagination [pages]="pages"></app-pagination>
+  
+  <app-item [items]="items.projects"></app-item>
+  
+  <app-pagination [pages]="pages"></app-pagination>  
+</ng-container>

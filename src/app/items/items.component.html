@@ -1,0 +1,30 @@
+<div class="items">
+  <div class="small-12 medium-6 large-4 item" *ngFor="let item of items; trackBy: trackByItems">
+    <figure>
+      <a [routerLink]="['/project', item.id]">
+        <div class="imgWrapper">
+          <img [src]="item.covers.max_808" [alt]="item.slug">
+        </div>
+      </a>
+
+      <figcaption>
+        <h4>
+          <a [routerLink]="['/project', item.id]" [title]="item.slug">{{item.name}}</a>
+        </h4>
+
+        <div class="description">
+          <div class="author">
+            By <span *ngFor="let author of item.owners; let isLast = last">{{author.first_name}} {{author.last_name}}{{isLast ? '' : ', '}}</span>
+          </div>
+          
+          <div class="categories">
+            <a [routerLink]="['/project', item.id]" title="{{category}}" *ngFor="let category of item.fields; let isLast = last">
+              {{category}}{{isLast ? '' : ', '}}
+            </a>
+          </div>
+        </div>
+      </figcaption>
+    </figure>
+  </div>
+</div>
+

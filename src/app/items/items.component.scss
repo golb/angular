@@ -1,0 +1,83 @@
+.items {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.item {
+  padding-left: .9375rem;
+  padding-right: .9375rem;
+  width: 100%;
+}
+
+.small-12 {
+  width: 100%;
+}
+
+@media only screen and (min-width: 40.063em) {
+  .medium-6 {
+    width: 50%;
+  }
+}
+
+@media only screen and (min-width: 64.063em) {
+  .large-4 {
+    width: 33.33333%;
+  }
+}
+
+figure {
+  position: relative;
+  margin: 0 0 1.25rem 0;
+}
+
+@media only screen and (min-width: 40.063em) {
+  figure {
+    margin-bottom: 1.875rem;
+  }
+}
+
+@media only screen and (min-width: 64.063em) {
+  figure {
+    margin-bottom: 3.75rem;
+  }
+}
+
+.imgWrapper {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 1.25rem;
+  
+  img {
+    width: 100%;
+  }
+}
+
+figcaption {
+  font-size: 10pt;
+  color: #909090;
+  
+  h4 {
+    font-size: 11pt;
+    color: #383838;
+    font-weight: 700;
+  }
+  
+  h4, .author {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    margin: 0;
+  }
+}
+
+.description {
+  display: flex;
+  justify-content: space-between;
+}
+
+.categories {
+  margin-left: 25px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}

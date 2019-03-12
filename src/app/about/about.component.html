@@ -1,0 +1,40 @@
+<h1>About</h1>
+
+<p>It's an Angualr application. App using 3-rd party API for getting creatives data.</p>
+<p>You can search any creatives by any term. Just type it in search bar.</p>
+
+<p>For run APP just type: `ng serve`</p>
+<p>For run TESTS just type: `ng test` or whith params for coverage: `ng test --watch=false --code-coverage` and get visual data form ROOT -> coverage folder -> index.html</p>
+<p>For run E2E TESTS just type: `ng e2e`</p>
+
+<h2>Contact us</h2>
+
+<div *ngIf="submitted" class="results">
+  <p>You'll submited this:</p>
+  <strong>Name:</strong> 
+  <span>{{ contactForm.controls.name.value }}</span>
+
+  <strong>Message:</strong> 
+  <span>{{ contactForm.controls.message.value }}</span>
+</div>
+
+<form [formGroup]="contactForm" (ngSubmit)="onContact()">
+  <h5 *ngIf="success">Your form is valid!</h5>
+  <label>
+    Name:
+    <input type="text" formControlName="name">
+    <div *ngIf="submitted && contactForm.controls.name.errors" class="error">
+      <div *ngIf="contactForm.controls.name.errors.required">Your name is required</div>
+    </div>
+  </label>
+
+  <label>
+    Message:
+    <textarea formControlName="message"></textarea>
+    <div *ngIf="submitted && contactForm.controls.message.errors" class="error">
+      <div *ngIf="contactForm.controls.message.errors.required">A message is required</div>
+    </div>
+  </label>
+
+  <input type="submit" value="Send message" class="sendIt">
+</form>
